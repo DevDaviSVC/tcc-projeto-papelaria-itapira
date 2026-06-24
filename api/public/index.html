@@ -1,732 +1,459 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Papelaria | Itapira</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800;900&amp;family=DynaPuff:wght@400..700&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#7C05F2",
-              secondary: "#EE0CF2",
-              accent: "#14F20C",
-              warm: "#F25D07",
-              "light-bg": "#F2F2F2",
-            },
-            fontFamily: {
-              display: ["DynaPuff", "system-ui", "sans-serif"],
-              sans: ["Plus Jakarta Sans", "sans-serif"],
-            },
-            borderRadius: {
-              blob: "30% 70% 70% 30% / 30% 30% 70% 70%",
-              xl: "1.5rem",
-              "2xl": "2.5rem",
-            },
-            animation: {
-              float: "float 6s ease-in-out infinite",
-              wiggle: "wiggle 1s ease-in-out infinite",
-            },
-            keyframes: {
-              float: {
-                "0%, 100%": { transform: "translateY(0)" },
-                "50%": { transform: "translateY(-20px)" },
-              },
-              wiggle: {
-                "0%, 100%": { transform: "rotate(-3deg)" },
-                "50%": { transform: "rotate(3deg)" },
-              },
-            },
-          },
-        },
-      };
-    </script>
-    <style>
-      .blob-bg {
-        position: absolute;
-        z-index: -1;
-        filter: blur(60px);
-        opacity: 0.6;
-      }
-      .wavy-underline {
-        background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q12.5 0 25 10 T50 10 T75 10 T100 10' fill='none' stroke='%2314F20C' stroke-width='4'/%3E%3C/svg%3E");
-        background-position: 0 100%;
-        background-repeat: repeat-x;
-        background-size: 40px 10px;
-        padding-bottom: 8px;
-      }
-      .organic-card {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-      }
-    </style>
-  </head>
-  <body
-    class="bg-light-bg font-sans text-slate-900 selection:bg-accent selection:text-slate-900 overflow-x-hidden"
-  >
-    <!-- Decorative Background Blobs -->
-    <div
-      class="blob-bg bg-primary w-[400px] h-[400px] -top-20 -left-20 rounded-full animate-float"
-    ></div>
-    <div
-      class="blob-bg bg-secondary w-[300px] h-[300px] top-1/2 -right-20 rounded-full"
-      style="animation: float 8s ease-in-out infinite reverse"
-    ></div>
-    <div
-      class="blob-bg bg-accent w-[250px] h-[250px] bottom-0 left-1/4 rounded-full animate-pulse opacity-20"
-    ></div>
-    <div class="relative flex h-auto min-h-screen w-full flex-col">
-      <div class="layout-container flex h-full grow flex-col">
-        <!-- Header (Full-width Navigation from SCREEN_3) -->
-        <header
-          class="flex items-center justify-between px-6 py-4 bg-white shadow-md border-b-2 border-primary/5 sticky top-0 z-50 w-full"
-        >
-          <div class="flex items-center gap-6">
-            <div class="flex items-center gap-2 group cursor-pointer">
-              
-              <h2
-                class="text-primary font-display text-2xl font-black tracking-tight"
-                style=""
-              >
-                Papelaria Itapira
-              </h2>
-            </div>
-            <nav class="hidden lg:flex items-center gap-8">
-              <a
-                class="text-slate-700 hover:text-primary transition-colors text-sm font-bold flex flex-col items-center group"
-                href="#"
-                style=""
-              >
-                Home
-                <span
-                  class="h-1 w-0 bg-accent transition-all group-hover:w-full rounded-full"
-                ></span>
-              </a>
-              <a
-                class="text-slate-700 hover:text-primary transition-colors text-sm font-bold flex flex-col items-center group"
-                href="./vitrine"
-                style=""
-              >
-                Shop
-                <span
-                  class="h-1 w-0 bg-secondary transition-all group-hover:w-full rounded-full"
-                ></span>
-              </a>
-              <a
-                class="text-slate-700 hover:text-primary transition-colors text-sm font-bold flex flex-col items-center group"
-                href="#"
-                style=""
-              >
-                About
-                <span
-                  class="h-1 w-0 bg-warm transition-all group-hover:w-full rounded-full"
-                ></span>
-              </a>
-            </nav>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Papelaria | Itapira</title>
+  <link href="./css/fonts.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="./script/tailwindcss.js"></script>
+  <script src="./script/tailwindcss.config.js"></script>
+  <style>
+    .blob-bg {
+      position: absolute;
+      z-index: -1;
+      filter: blur(60px);
+      opacity: 0.6;
+    }
+
+    .wavy-underline {
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q12.5 0 25 10 T50 10 T75 10 T100 10' fill='none' stroke='%2314F20C' stroke-width='4'/%3E%3C/svg%3E");
+      background-position: 0 100%;
+      background-repeat: repeat-x;
+      background-size: 40px 10px;
+      padding-bottom: 8px;
+    }
+
+    .organic-card {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+  </style>
+</head>
+
+<body class="bg-light-bg font-sans text-slate-900 selection:bg-accent selection:text-slate-900 overflow-x-hidden">
+  <!-- Decorative Background Blobs -->
+  <div class="blob-bg bg-primary w-[400px] h-[400px] -top-20 -left-20 rounded-full animate-float"></div>
+  <div class="blob-bg bg-secondary w-[300px] h-[300px] top-1/2 -right-20 rounded-full"
+    style="animation: float 8s ease-in-out infinite reverse"></div>
+  <div class="blob-bg bg-accent w-[250px] h-[250px] bottom-0 left-1/4 rounded-full animate-pulse opacity-20"></div>
+  <div class="relative flex h-auto min-h-screen w-full flex-col">
+    <div class="layout-container flex h-full grow flex-col">
+      <!-- Header (Full-width Navigation from SCREEN_3) -->
+       <header
+        class="flex items-center justify-between px-6 py-4 bg-white shadow-md border-b-2 border-primary/5 sticky top-0 z-50 w-full">
+        <div class="flex items-center gap-6">
+          <div class="flex items-center gap-2 group cursor-pointer">
+ 
+            <a class="text-primary font-display text-2xl font-black tracking-tight" href="#" style="">
+              Papelaria Itapira
+            </a>
           </div>
-          <div class="flex items-center gap-4">
-            <div
-              class="hidden sm:flex items-center bg-light-bg rounded-full px-4 py-2 border-2 border-transparent focus-within:border-primary transition-all"
-            >
-              <span class="material-symbols-outlined text-slate-400" style=""
-                >search</span
-              >
-              <input
-                class="bg-transparent border-none focus:ring-0 text-sm placeholder:text-slate-400 w-40"
-                placeholder="Find magic..."
-                type="text"
-              />
-            </div>
-            <div class="flex gap-2">
-              <button
-                class="relative bg-secondary/10 text-secondary p-3 rounded-2xl hover:bg-secondary hover:text-white transition-all group"
-                style=""
-              >
-                <span class="material-symbols-outlined" style=""
-                  >shopping_bag</span
-                >
-                <span
-                  class="absolute -top-1 -right-1 bg-accent text-slate-900 text-[10px] font-black w-5 h-5 flex items-center justify-center rounded-full border-2 border-white"
-                  style=""
-                  >2</span
-                >
-              </button>
-              <button
-                class="bg-primary/10 text-primary p-3 rounded-2xl hover:bg-primary hover:text-white transition-all"
-                style=""
-              >
-                <span class="material-symbols-outlined" style=""
-                  >celebration</span
-                >
-              </button>
-            </div>
-          </div>
-        </header>
-        <main class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
-          <!-- Hero Section -->
-          <section class="mt-8 mb-16">
-            <div
-              class="relative min-h-[500px] flex flex-col lg:flex-row items-center bg-gradient-to-br from-primary via-primary to-secondary rounded-[3rem] p-8 md:p-12 overflow-hidden shadow-2xl border-b-8 border-r-8 border-primary/20"
-            >
-              <div class="absolute top-10 right-10 opacity-20 animate-wiggle">
-                <span
-                  class="material-symbols-outlined text-[120px] text-white"
-                  style=""
-                  >auto_awesome</span
-                >
-              </div>
-              <div class="absolute -bottom-10 -left-10 opacity-20 rotate-45">
-                <span
-                  class="material-symbols-outlined text-[150px] text-accent"
-                  style=""
-                  >stylus</span
-                >
-              </div>
-              <div class="relative z-10 lg:w-3/5 text-center lg:text-left">
-                <div
-                  class="inline-flex items-center gap-2 px-4 py-2 bg-accent rounded-full text-slate-900 font-bold text-sm mb-6 animate-bounce"
-                  style=""
-                >
-                  <span class="material-symbols-outlined text-sm" style=""
-                    >rocket_launch</span
-                  >
-                  FRESH SPRING DEALS
-                </div>
-                <h1
-                  class="font-display text-white text-5xl md:text-7xl lg:text-8xl leading-tight mb-6 tracking-tight"
-                  style=""
-                >
-                  Vibrant Tools for
-                  <span
-                    class="text-accent underline decoration-wavy decoration-4"
-                    style=""
-                    >Creative</span
-                  >
-                  Minds
-                </h1>
-                <p
-                  class="text-white/90 text-xl md:text-2xl font-medium mb-10 max-w-xl"
-                  style=""
-                >
-                  Turn your ideas into colorful reality. Get
-                  <span class="bg-secondary px-2 rounded-lg font-black" style=""
-                    >20% OFF</span
-                  >
-                  your first order!
-                </p>
-                <div
-                  class="flex flex-wrap gap-4 justify-center lg:justify-start"
-                >
-                  <button
-                    class="bg-accent text-slate-900 px-10 py-5 rounded-2xl font-display text-xl font-black hover:scale-105 transition-transform shadow-[0_10px_0_0_#0da008] active:translate-y-1 active:shadow-none"
-                    style=""
-                  >
-                    Shop the Collection
-                  </button>
-                  <button
-                    class="bg-white/10 backdrop-blur-md text-white border-2 border-white/30 px-10 py-5 rounded-2xl font-bold hover:bg-white/20 transition-all"
-                    style=""
-                  >
-                    See Trends
-                  </button>
-                </div>
-              </div>
-              <div class="hidden lg:block lg:w-2/5 relative">
-                <div
-                  class="relative w-full aspect-square bg-white/10 rounded-blob animate-float overflow-hidden border-4 border-white/20 p-4"
-                >
-                  <img
-                    alt="Hero stationery image"
-                    class="w-full h-full object-cover rounded-blob rotate-3 hover:rotate-0 transition-transform duration-500"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7njxB5UpFFiBLWxSC-d44GdRLdwIirZRJmvqhKxDs7Ddn5NyfrHtu4VFqJwh5IuyBc-Di0lKMy-2DUczlxuoXEO5eLCcrg2r3H7cMjjbPCmoWjew1-BjXDjvdLAuEjRKQzs9ULzMh1W4Cl2r8tkTa0NIwmPhMG6Tnat0MOByhN1OhXCz2QrrMGjfW3JhMNeerj6BcHfWtzEcvHyCPSGBx7o7b9AZGxdwLuwvEPmZIvEsWXFq2YQmn4uovjk1htuk7wNF9p03RteY"
-                    style=""
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- About Us / Our History -->
-          <section class="py-20 flex flex-col lg:flex-row items-center gap-16">
-            <div class="lg:w-1/2 relative">
-              <div
-                class="absolute -inset-4 bg-warm/20 rounded-blob animate-pulse"
-              ></div>
-              <img
-                alt="Our workshop"
-                class="relative rounded-2xl shadow-2xl border-4 border-white transform -rotate-3 hover:rotate-0 transition-transform duration-500"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkMcGrxonXFFnLm3XoghhklqjmhmevVUSh_IAc6kdQ8e26uL0etX6JAD9-0vC-8KyiHFfrt1CMJrCmNZpJLo-9lp_qHZyWiqAlUyV7-v-AGtP0-uFAIbAPvxO50hymwmRCAvPDos8TaVG9Xqku3nxrj_Ew7SOWUDEUeP6WfZKEKLqcCAFzqQidlJW1rQFa-r6epNB0GsxVYTZ7isFBTTtJglHE4fVApiCQhNde0uhbgF9AzrHA1Nvlgnz-9sRq0hq4tsRuF-Div10"
-                style=""
-              />
-            </div>
-            <div class="lg:w-1/2">
-              <h2
-                class="font-display text-4xl md:text-5xl text-slate-900 mb-6"
-                style=""
-              >
-                Born from a <span class="text-secondary" style="">Doodle</span>
-              </h2>
-              <div class="h-2 w-32 bg-accent rounded-full mb-8"></div>
-              <p
-                class="text-lg text-slate-600 leading-relaxed font-medium mb-6"
-                style=""
-              >
-                What started as a shared passion for colorful notebooks and
-                smooth-writing pens in a tiny garage studio is now Papelaria
-                Criativa. We believe that everyone is an artist at heart, and
-                our mission is to provide the spark that ignites your
-                creativity.
-              </p>
-              <p
-                class="text-lg text-slate-600 leading-relaxed font-medium"
-                style=""
-              >
-                Every item in our collection is handpicked or designed with a
-                simple goal: to make the act of creating as joyful as the result
-                itself. From neon markers to eco-friendly planners, we bring the
-                fun back to functionality.
-              </p>
-            </div>
-          </section>
-          <!-- Highlights Section (Feature Spotlight) -->
-          <section
-            class="py-20 bg-primary/5 rounded-[4rem] px-8 md:px-16 overflow-hidden relative"
-          >
-            <div class="absolute top-0 right-0 p-8 opacity-10">
-              <span class="material-symbols-outlined text-[200px]" style=""
-                >draw</span
-              >
-            </div>
-            <div class="text-center mb-16 relative z-10">
-              <h2
-                class="font-display text-4xl md:text-6xl text-slate-900 mb-4 wavy-underline inline-block"
-                style=""
-              >
-                The Spotlight
-              </h2>
-              <p class="text-slate-600 font-bold" style="">
-                A few things we're currently obsessed with.
-              </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div
-                class="bg-white p-8 rounded-[3rem] shadow-xl border-t-8 border-secondary flex flex-col md:flex-row gap-8 items-center"
-              >
-                <div
-                  class="w-full md:w-1/3 aspect-square bg-light-bg rounded-2xl overflow-hidden"
-                >
-                  <img
-                    alt="Neon Pens"
-                    class="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVNhfKGSxcD5SsOkFKIirvDUSXVK8bmMLyAR9HoWhZxZ8X4syzA9wLvhIy795fzRAZbzB2JeZT_Fk4N8dk9tzrTOH9awt51Eu86AnTUzRoXzufPNJM4vpRygmkSJN9IHipNIcLMsco3fvsUFpWeuyHB_zsYNGGyGnxCfk2oA17c4ANnqiscqS3kgpjPWfUBS1bzeKKK243ebDCL9FwS751D8wWV1mXeirxPGBLj0dlcAhXcUfDlon-YUBS18bpzbIaglQw5VmpE18"
-                    style=""
-                  />
-                </div>
-                <div class="w-full md:w-2/3">
-                  <span
-                    class="bg-secondary text-white px-3 py-1 rounded-full text-xs font-black uppercase mb-4 inline-block"
-                    style=""
-                    >Bestseller</span
-                  >
-                  <h3
-                    class="font-display text-2xl text-slate-900 mb-2"
-                    style=""
-                  >
-                    Electric Dream Pens
-                  </h3>
-                  <p class="text-slate-600 text-sm mb-4" style="">
-                    Water-resistant ink in colors so bright they practically
-                    glow. Perfect for outlining your boldest dreams.
-                  </p>
-                  <button
-                    class="text-primary font-black flex items-center gap-2 hover:gap-4 transition-all"
-                    style=""
-                  >
-                    Explore
-                    <span class="material-symbols-outlined" style=""
-                      >arrow_forward</span
-                    >
-                  </button>
-                </div>
-              </div>
-              <div
-                class="bg-white p-8 rounded-[3rem] shadow-xl border-t-8 border-accent flex flex-col md:flex-row gap-8 items-center"
-              >
-                <div
-                  class="w-full md:w-1/3 aspect-square bg-light-bg rounded-2xl overflow-hidden"
-                >
-                  <img
-                    alt="Floral Planner"
-                    class="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCby9EEBnovDCb30TMa8G05SlFArLzdGiFn7eRwXfKm2tMzSOvviIIf1Y6SQH5cPhzGDDKpV0tVKndcDzLb3-_qhDKYRgau2nicRR1IaJv0WiAPX2FkauWQlolO9PJvfMyAJ7K8cYmCX8g20a7vpyeKvCFxKumaBJecwiC92JrM41MTa9luGgNipjU0zHnJvo2PW_qKdDv7P72CevIeSvRTiCdgvj42Yi58t_LPzZ54VeS-OkzEztfakpDxIvCBs5omOhh-iDnowFU"
-                    style=""
-                  />
-                </div>
-                <div class="w-full md:w-2/3">
-                  <span
-                    class="bg-accent text-slate-900 px-3 py-1 rounded-full text-xs font-black uppercase mb-4 inline-block"
-                    style=""
-                    >Staff Pick</span
-                  >
-                  <h3
-                    class="font-display text-2xl text-slate-900 mb-2"
-                    style=""
-                  >
-                    Garden Gate Planner
-                  </h3>
-                  <p class="text-slate-600 text-sm mb-4" style="">
-                    Undated for flexibility, featuring monthly art commissions
-                    that make planning feel like visiting a gallery.
-                  </p>
-                  <button
-                    class="text-primary font-black flex items-center gap-2 hover:gap-4 transition-all"
-                    style=""
-                  >
-                    Explore
-                    <span class="material-symbols-outlined" style=""
-                      >arrow_forward</span
-                    >
-                  </button>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- Our Mission / Values -->
-          <section class="py-24 text-center">
-            <h2
-              class="font-display text-4xl md:text-5xl text-slate-900 mb-16"
-              style=""
-            >
-              Why we <span class="text-warm" style="">Sparkle</span>
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-              <div class="flex flex-col items-center">
-                <div
-                  class="w-20 h-20 bg-accent rounded-blob flex items-center justify-center text-slate-900 mb-6 shadow-lg shadow-accent/20"
-                >
-                  <span class="material-symbols-outlined text-3xl" style=""
-                    >eco</span
-                  >
-                </div>
-                <h4 class="font-display text-2xl text-slate-900 mb-3" style="">
-                  Eco-Magic
-                </h4>
-                <p class="text-slate-600 font-medium" style="">
-                  Recycled papers and vegetable-based inks. Good for your art,
-                  great for the earth.
-                </p>
-              </div>
-              <div class="flex flex-col items-center">
-                <div
-                  class="w-20 h-20 bg-secondary rounded-blob flex items-center justify-center text-white mb-6 shadow-lg shadow-secondary/20"
-                >
-                  <span class="material-symbols-outlined text-3xl" style=""
-                    >brush</span
-                  >
-                </div>
-                <h4 class="font-display text-2xl text-slate-900 mb-3" style="">
-                  Pure Joy
-                </h4>
-                <p class="text-slate-600 font-medium" style="">
-                  We design for the "wow" factor. If it doesn't make you smile,
-                  it doesn't make the cut.
-                </p>
-              </div>
-              <div class="flex flex-col items-center">
-                <div
-                  class="w-20 h-20 bg-primary rounded-blob flex items-center justify-center text-white mb-6 shadow-lg shadow-primary/20"
-                >
-                  <span class="material-symbols-outlined text-3xl" style=""
-                    >groups</span
-                  >
-                </div>
-                <h4 class="font-display text-2xl text-slate-900 mb-3" style="">
-                  Community First
-                </h4>
-                <p class="text-slate-600 font-medium" style="">
-                  Supporting local artists through collaborations and workshops
-                  in our home studio.
-                </p>
-              </div>
-            </div>
-          </section>
-          <!-- Contact & Socials -->
-          <section class="py-20 mb-20">
-            <div
-              class="bg-white rounded-[4rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row"
-            >
-              <div class="lg:w-1/2 p-8 md:p-16">
-                <h2 class="font-display text-4xl text-slate-900 mb-8" style="">
-                  Say Hello!
-                </h2>
-                <div class="space-y-6">
-                  <div class="flex items-start gap-4">
-                    <div class="bg-primary/10 p-3 rounded-2xl text-primary">
-                      <span class="material-symbols-outlined" style=""
-                        >location_on</span
-                      >
-                    </div>
-                    <div>
-                      <p class="font-bold text-slate-900" style="">
-                        Visit the Studio
-                      </p>
-                      <p class="text-slate-600" style="">
-                        123 Creative Lane, Art District, NY 10012
-                      </p>
-                    </div>
-                  </div>
-                  <div class="flex items-start gap-4">
-                    <div class="bg-secondary/10 p-3 rounded-2xl text-secondary">
-                      <span class="material-symbols-outlined" style=""
-                        >mail</span
-                      >
-                    </div>
-                    <div>
-                      <p class="font-bold text-slate-900" style="">Email Us</p>
-                      <p class="text-slate-600" style="">
-                        hello@papelariacriativa.com
-                      </p>
-                    </div>
-                  </div>
-                  <div class="flex items-start gap-4">
-                    <div class="bg-warm/10 p-3 rounded-2xl text-warm">
-                      <span class="material-symbols-outlined" style=""
-                        >chat_bubble</span
-                      >
-                    </div>
-                    <div>
-                      <p class="font-bold text-slate-900" style="">
-                        Social Magic
-                      </p>
-                      <div class="flex gap-4 mt-2">
-                        <a
-                          class="text-primary hover:scale-110 transition-transform font-bold underline"
-                          href="#"
-                          style=""
-                          >Instagram</a
-                        >
-                        <a
-                          class="text-secondary hover:scale-110 transition-transform font-bold underline"
-                          href="#"
-                          style=""
-                          >Pin&nbsp; terest</a
-                        >
-                        <a
-                          class="text-warm hover:scale-110 transition-transform font-bold underline"
-                          href="#"
-                          style=""
-                          >TikTok</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="lg:w-1/2 min-h-[400px] relative bg-slate-200">
-                <!-- Placeholder for Map -->
-                <div
-                  class="absolute inset-0 grayscale contrast-125 opacity-50 bg-[url('https://api.mapbox.com/styles/v1/mapbox/light-v10/static/-73.99,40.73,13,0/600x600?access_token=YOUR_TOKEN')] bg-cover bg-center"
-                ></div>
-                <div
-                  class="absolute inset-0 flex items-center justify-center p-8 text-center bg-primary/20 backdrop-blur-sm"
-                >
-                  <div class="bg-white p-6 rounded-3xl shadow-xl">
-                    <span
-                      class="material-symbols-outlined text-primary text-4xl mb-2"
-                      style=""
-                      >map</span
-                    >
-                    <p class="font-display text-xl text-slate-900" style="">
-                      Interactive Map
-                    </p>
-                    <p
-                      class="text-xs text-slate-500 font-bold uppercase tracking-widest mt-1"
-                      style=""
-                    >
-                      Coming to Life Soon
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-        <!-- Fun Footer -->
-        <footer class="mt-20 relative">
-          
+          <nav class="hidden lg:flex items-center gap-8">
+            <a class="text-slate-700 hover:text-primary transition-colors text-sm font-bold flex flex-col items-center group"
+              href="#" style="">
+              Início
+              <span class="h-1 w-0 bg-accent transition-all group-hover:w-full rounded-full"></span>
+            </a>
+            <a class="text-slate-700 hover:text-primary transition-colors text-sm font-bold flex flex-col items-center group"
+              href="./vitrine" style="">
+              Produtos
+              <span class="h-1 w-0 bg-secondary transition-all group-hover:w-full rounded-full"></span>
+            </a>
+            <a class="text-slate-700 hover:text-primary transition-colors text-sm font-bold flex flex-col items-center group"
+              href="#" style="">
+              Sobre
+              <span class="h-1 w-0 bg-warm transition-all group-hover:w-full rounded-full"></span>
+            </a>
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
           <div
-            class="bg-white px-6 pt-16 pb-8 shadow-[0_-10px_30px_rgba(0,0,0,0.05)]"
-          >
-            <div
-              class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12"
-            >
-              <div class="col-span-1 md:col-span-1">
-                <div class="flex items-center gap-3 mb-6">
-                  <div class="bg-primary p-2 rounded-xl text-white">
-                    <span class="material-symbols-outlined" style=""
-                      >auto_fix_high</span
-                    >
-                  </div>
-                  <h2
-                    class="font-display text-2xl text-primary font-black"
-                    style=""
-                  >
-                    Papelaria
-                  </h2>
-                </div>
-                <p class="text-slate-600 font-medium leading-relaxed" style="">
-                  Crafting joy and fueling creativity since 2024. Your world
-                  deserves a splash of color!
-                </p>
-                <div class="flex gap-4 mt-6">
-                  <a
-                    class="w-10 h-10 rounded-full bg-light-bg flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
-                    href="#"
-                    style=""
-                    ><span class="material-symbols-outlined" style=""
-                      >flutter_dash</span
-                    ></a
-                  >
-                  <a
-                    class="w-10 h-10 rounded-full bg-light-bg flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all"
-                    href="#"
-                    style=""
-                    ><span class="material-symbols-outlined" style=""
-                      >heart_plus</span
-                    ></a
-                  >
-                </div>
-              </div>
-              <div>
-                <h4 class="font-display text-xl text-slate-900 mb-6" style="">
-                  Explore
-                </h4>
-                <ul class="space-y-4">
-                  <li class="" style="">
-                    <a
-                      class="text-slate-600 font-bold hover:text-primary transition-colors flex items-center gap-2"
-                      href="#"
-                      style=""
-                      >New Drops
-                      <span class="w-2 h-2 rounded-full bg-accent"></span
-                    ></a>
-                  </li>
-                  <li class="" style="">
-                    <a
-                      class="text-slate-600 font-bold hover:text-primary transition-colors"
-                      href="#"
-                      style=""
-                      >Wholesale</a
-                    >
-                  </li>
-                  <li class="" style="">
-                    <a
-                      class="text-slate-600 font-bold hover:text-primary transition-colors"
-                      href="#"
-                      style=""
-                      >Workshops</a
-                    >
-                  </li>
-                  <li class="" style="">
-                    <a
-                      class="text-slate-600 font-bold hover:text-primary transition-colors"
-                      href="#"
-                      style=""
-                      >Collaborations</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="font-display text-xl text-slate-900 mb-6" style="">
-                  Support
-                </h4>
-                <ul class="space-y-4">
-                  <li class="" style="">
-                    <a
-                      class="text-slate-600 font-bold hover:text-primary transition-colors"
-                      href="#"
-                      style=""
-                      >Shipping</a
-                    >
-                  </li>
-                  <li class="" style="">
-                    <a
-                      class="text-slate-600 font-bold hover:text-primary transition-colors"
-                      href="#"
-                      style=""
-                      >Returns</a
-                    >
-                  </li>
-                  <li class="" style="">
-                    <a
-                      class="text-slate-600 font-bold hover:text-primary transition-colors"
-                      href="#"
-                      style=""
-                      >FAQ</a
-                    >
-                  </li>
-                  <li class="" style="">
-                    <a
-                      class="text-slate-600 font-bold hover:text-primary transition-colors"
-                      href="#"
-                      style=""
-                      >Help Desk</a
-                    >
-                  </li>
-                </ul>
-              </div>
+            class="hidden sm:flex items-center bg-light-bg rounded-full px-4 py-2 border-2 border-transparent focus-within:border-primary transition-all">
+            <span class="material-symbols-outlined text-slate-400" style="">search</span>
+            <input class="bg-transparent border-none focus:ring-0 text-sm placeholder:text-slate-400 w-40"
+              placeholder="Buscar produtos..." type="text" />
+          </div>
+          <div class="flex gap-2">
+            <button
+              class="relative bg-secondary/10 text-secondary p-3 rounded-2xl hover:bg-secondary hover:text-white transition-all group"
+              style="">
+              <span class="material-symbols-outlined" style="">shopping_bag</span>
+              <span
+                class="absolute -top-1 -right-1 bg-accent text-slate-900 text-[10px] font-black w-5 h-5 flex items-center justify-center rounded-full border-2 border-white"
+                style="">2</span>
+            </button>
+            <button class="bg-primary/10 text-primary p-3 rounded-2xl hover:bg-primary hover:text-white transition-all"
+              style="">
+              <span class="material-symbols-outlined" style="">celebration</span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+        <!-- Hero Section -->
+        <section class="mt-8 mb-16">
+          <div
+            class="relative min-h-[500px] flex flex-col lg:flex-row items-center bg-gradient-to-br from-primary via-primary to-secondary rounded-[3rem] p-8 md:p-12 overflow-hidden shadow-2xl border-b-8 border-r-8 border-primary/20">
+            <div class="absolute top-10 right-10 opacity-20 animate-wiggle">
+              <span class="material-symbols-outlined text-[120px] text-white" style="">auto_awesome</span>
+            </div>
+            <div class="absolute -bottom-10 -left-10 opacity-20 rotate-45">
+              <span class="material-symbols-outlined text-[150px] text-accent" style="">stylus</span>
+            </div>
+            <div class="relative z-10 lg:w-3/5 text-center lg:text-left">
               <div
-                class="bg-primary/5 p-6 rounded-[2rem] border-2 border-primary/10"
-              >
-                <h4 class="font-display text-xl text-primary mb-4" style="">
-                  Stay Inspired
-                </h4>
-                <p class="text-slate-600 text-sm font-bold mb-6" style="">
-                  Join our newsletter for creative tips and secret drops.
-                </p>
-                <div class="flex flex-col gap-3">
-                  <input
-                    class="bg-white border-2 border-primary/20 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:outline-none focus:border-transparent"
-                    placeholder="your@email.com"
-                    type="email"
-                  />
-                  <button
-                    class="bg-primary text-white font-black py-3 rounded-xl hover:scale-105 transition-transform flex items-center justify-center gap-2 shadow-lg shadow-primary/20"
-                    style=""
-                  >
-                    SUBSCRIBE
-                    <span class="material-symbols-outlined text-sm" style=""
-                      >magic_button</span
-                    >
-                  </button>
-                </div>
+                class="inline-flex items-center gap-2 px-4 py-2 bg-accent rounded-full text-slate-900 font-bold text-sm mb-6 animate-bounce"
+                style="">
+                <span class="material-symbols-outlined text-sm" style="">rocket_launch</span>
+                VOLTA ÀS AULAS
+              </div>
+              <h1 class="font-display text-white text-5xl md:text-7xl lg:text-8xl leading-tight mb-6 tracking-tight"
+                style="">
+                Tudo para sua
+                <span class="text-accent underline decoration-wavy decoration-4" style="">Criatividade</span>
+                e Aprendizado
+              </h1>
+              <p class="text-white/90 text-xl md:text-2xl font-medium mb-10 max-w-xl" style="">
+                Materiais escolares, papelaria e artigos de escritório com qualidade e
+                <span class="bg-secondary px-2 rounded-lg font-black" style="">preços imbatíveis!</span>
+              </p>
+              <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                <a class="bg-accent text-slate-900 px-10 py-5 rounded-2xl font-display text-xl font-black hover:scale-105 transition-transform shadow-[0_10px_0_0_#0da008] active:translate-y-1 active:shadow-none"
+                  href="./vitrine">
+                  Ver Produtos
+                </a>
+                <button
+                  class="bg-white/10 backdrop-blur-md text-white border-2 border-white/30 px-10 py-5 rounded-2xl font-bold hover:bg-white/20 transition-all"
+                  style="">
+                  Saiba Mais
+                </button>
               </div>
             </div>
-            <div
-              class="max-w-7xl mx-auto mt-16 pt-8 border-t-2 border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400 font-bold"
-            >
-              <p class="" style="">
-                © 2024 Papelaria Criativa. Spread the magic.
-              </p>
-              <div class="flex gap-8">
-                <a class="hover:text-primary" href="#" style="">Privacy</a>
-                <a class="hover:text-primary" href="#" style="">Terms</a>
-                <a class="hover:text-primary" href="#" style="">Cookies</a>
+            <div class="hidden lg:block lg:w-2/5 relative">
+              <div
+                class="relative w-full aspect-square bg-white/10 rounded-blob animate-float overflow-hidden border-4 border-white/20 p-4">
+                <img alt="Hero stationery image"
+                  class="w-full h-full object-cover rounded-blob rotate-3 hover:rotate-0 transition-transform duration-500"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7njxB5UpFFiBLWxSC-d44GdRLdwIirZRJmvqhKxDs7Ddn5NyfrHtu4VFqJwh5IuyBc-Di0lKMy-2DUczlxuoXEO5eLCcrg2r3H7cMjjbPCmoWjew1-BjXDjvdLAuEjRKQzs9ULzMh1W4Cl2r8tkTa0NIwmPhMG6Tnat0MOByhN1OhXCz2QrrMGjfW3JhMNeerj6BcHfWtzEcvHyCPSGBx7o7b9AZGxdwLuwvEPmZIvEsWXFq2YQmn4uovjk1htuk7wNF9p03RteY"
+                  style="" />
               </div>
             </div>
           </div>
-        </footer>
-      </div>
+        </section>
+        <!-- About Us / Our History -->
+        <section class="py-20 flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-1/2 relative">
+            <div class="absolute -inset-4 bg-warm/20 rounded-blob animate-pulse"></div>
+            <img alt="Our workshop"
+              class="relative rounded-2xl shadow-2xl border-4 border-white transform -rotate-3 hover:rotate-0 transition-transform duration-500"
+              src="./assets/images/papelaria-itapira-fachada.jpg"
+              style="" />
+          </div>
+          <div class="lg:w-1/2">
+            <h2 class="font-display text-4xl md:text-5xl text-slate-900 mb-6" style="">
+              Nossa <span class="text-secondary" style="">História</span>
+            </h2>
+            <div class="h-2 w-32 bg-accent rounded-full mb-8"></div>
+            <p class="text-lg text-slate-600 leading-relaxed font-medium mb-6" style="">
+              A Papelaria Itapira nasceu com o propósito de atender à crescente demanda por materiais escolares e
+              produtos de escritório na cidade de Itapira e região. Ao longo dos anos, consolidou-se como referência
+              local, construindo um relacionamento próximo com estudantes, famílias, professores e empresas.
+            </p>
+            <p class="text-lg text-slate-600 leading-relaxed font-medium" style="">
+              Com a evolução dos hábitos de consumo, identificamos a necessidade de modernizar nossa presença e ampliar
+              nossa visibilidade digital, mantendo sempre o compromisso com qualidade, variedade e o atendimento
+              humanizado que nos define.
+            </p>
+          </div>
+        </section>
+        <!-- Highlights Section (Feature Spotlight) -->
+        <section class="py-20 bg-primary/5 rounded-[4rem] px-8 md:px-16 overflow-hidden relative">
+          <div class="absolute top-0 right-0 p-8 opacity-10">
+            <span class="material-symbols-outlined text-[200px]" style="">draw</span>
+          </div>
+          <div class="text-center mb-16 relative z-10">
+            <h2 class="font-display text-4xl md:text-6xl text-slate-900 mb-4 wavy-underline inline-block" style="">
+              Destaques da Loja
+            </h2>
+            <p class="text-slate-600 font-bold" style="">
+              Produtos que nossos clientes mais amam.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div
+              class="bg-white p-8 rounded-[3rem] shadow-xl border-t-8 border-secondary flex flex-col md:flex-row gap-8 items-center">
+              <div class="w-full md:w-1/3 aspect-square bg-light-bg rounded-2xl overflow-hidden">
+                <img alt="Neon Pens" class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVNhfKGSxcD5SsOkFKIirvDUSXVK8bmMLyAR9HoWhZxZ8X4syzA9wLvhIy795fzRAZbzB2JeZT_Fk4N8dk9tzrTOH9awt51Eu86AnTUzRoXzufPNJM4vpRygmkSJN9IHipNIcLMsco3fvsUFpWeuyHB_zsYNGGyGnxCfk2oA17c4ANnqiscqS3kgpjPWfUBS1bzeKKK243ebDCL9FwS751D8wWV1mXeirxPGBLj0dlcAhXcUfDlon-YUBS18bpzbIaglQw5VmpE18"
+                  style="" />
+              </div>
+              <div class="w-full md:w-2/3">
+                <span
+                  class="bg-secondary text-white px-3 py-1 rounded-full text-xs font-black uppercase mb-4 inline-block"
+                  style="">Mais Vendido</span>
+                <h3 class="font-display text-2xl text-slate-900 mb-2" style="">
+                  Canetas e Marcadores
+                </h3>
+                <p class="text-slate-600 text-sm mb-4" style="">
+                  Variedade completa de canetas, marcadores e estilógrafos para escrita, destaque e criação artística.
+                </p>
+                <button class="text-primary font-black flex items-center gap-2 hover:gap-4 transition-all" style="">
+                  Explorar
+                  <span class="material-symbols-outlined" style="">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="bg-white p-8 rounded-[3rem] shadow-xl border-t-8 border-accent flex flex-col md:flex-row gap-8 items-center">
+              <div class="w-full md:w-1/3 aspect-square bg-light-bg rounded-2xl overflow-hidden">
+                <img alt="Floral Planner" class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCby9EEBnovDCb30TMa8G05SlFArLzdGiFn7eRwXfKm2tMzSOvviIIf1Y6SQH5cPhzGDDKpV0tVKndcDzLb3-_qhDKYRgau2nicRR1IaJv0WiAPX2FkauWQlolO9PJvfMyAJ7K8cYmCX8g20a7vpyeKvCFxKumaBJecwiC92JrM41MTa9luGgNipjU0zHnJvo2PW_qKdDv7P72CevIeSvRTiCdgvj42Yi58t_LPzZ54VeS-OkzEztfakpDxIvCBs5omOhh-iDnowFU"
+                  style="" />
+              </div>
+              <div class="w-full md:w-2/3">
+                <span
+                  class="bg-accent text-slate-900 px-3 py-1 rounded-full text-xs font-black uppercase mb-4 inline-block"
+                  style="">Destaque</span>
+                <h3 class="font-display text-2xl text-slate-900 mb-2" style="">
+                  Cadernos e Agendas
+                </h3>
+                <p class="text-slate-600 text-sm mb-4" style="">
+                  Cadernos universitários, agendas e planners para organizar seus estudos, rotina e projetos com estilo.
+                </p>
+                <button class="text-primary font-black flex items-center gap-2 hover:gap-4 transition-all" style="">
+                  Explorar
+                  <span class="material-symbols-outlined" style="">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Our Mission / Values -->
+        <section class="py-24 text-center">
+          <h2 class="font-display text-4xl md:text-5xl text-slate-900 mb-16" style="">
+            Por que nos <span class="text-warm" style="">Escolher</span>
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="flex flex-col items-center">
+              <div
+                class="w-20 h-20 bg-accent rounded-blob flex items-center justify-center text-slate-900 mb-6 shadow-lg shadow-accent/20">
+                <span class="material-symbols-outlined text-3xl" style="">eco</span>
+              </div>
+              <h4 class="font-display text-2xl text-slate-900 mb-3" style="">
+                Qualidade Garantida
+              </h4>
+              <p class="text-slate-600 font-medium" style="">
+                Produtos cuidadosamente selecionados para garantir qualidade e durabilidade em cada compra.
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-20 h-20 bg-secondary rounded-blob flex items-center justify-center text-white mb-6 shadow-lg shadow-secondary/20">
+                <span class="material-symbols-outlined text-3xl" style="">brush</span>
+              </div>
+              <h4 class="font-display text-2xl text-slate-900 mb-3" style="">
+                Atendimento Humanizado
+              </h4>
+              <p class="text-slate-600 font-medium" style="">
+                Valorizamos cada cliente com atenção e respeito, oferecendo um atendimento próximo e personalizado.
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-20 h-20 bg-primary rounded-blob flex items-center justify-center text-white mb-6 shadow-lg shadow-primary/20">
+                <span class="material-symbols-outlined text-3xl" style="">groups</span>
+              </div>
+              <h4 class="font-display text-2xl text-slate-900 mb-3" style="">
+                Comunidade Local
+              </h4>
+              <p class="text-slate-600 font-medium" style="">
+                Comprometidos com Itapira e região, apoiando estudantes, famílias e empresas da nossa comunidade.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Contact & Socials -->
+        <section class="py-20 mb-20">
+          <div class="bg-white rounded-[4rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+            <div class="lg:w-1/2 p-8 md:p-16">
+              <h2 class="font-display text-4xl text-slate-900 mb-8" style="">
+                Fale Conosco!
+              </h2>
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <div class="bg-primary/10 p-3 rounded-2xl text-primary">
+                    <span class="material-symbols-outlined" style="">location_on</span>
+                  </div>
+                  <div>
+                    <p class="font-bold text-slate-900" style="">
+                      Visite a Loja
+                    </p>
+                    <p class="text-slate-600" style="">
+                      Itapira, São Paulo
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="bg-secondary/10 p-3 rounded-2xl text-secondary">
+                    <span class="material-symbols-outlined" style="">mail</span>
+                  </div>
+                  <div>
+                    <p class="font-bold text-slate-900" style="">E-mail</p>
+                    <p class="text-slate-600" style="">
+                      contato@papelariaItapira.com.br
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="bg-warm/10 p-3 rounded-2xl text-warm">
+                    <span class="material-symbols-outlined" style="">chat_bubble</span>
+                  </div>
+                  <div>
+                    <p class="font-bold text-slate-900" style="">
+                      Redes Sociais
+                    </p>
+                    <div class="flex gap-4 mt-2">
+                      <a class="text-primary hover:scale-110 transition-transform font-bold underline" href="#"
+                        style="">Instagram</a>
+                      <a class="text-secondary hover:scale-110 transition-transform font-bold underline" href="#"
+                        style="">Pinterest</a>
+                      <a class="text-warm hover:scale-110 transition-transform font-bold underline" href="#"
+                        style="">TikTok</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/2 min-h-[400px] relative bg-slate-200">
+              <!-- Placeholder for Map -->
+              <div
+                class="absolute inset-0 grayscale contrast-125 opacity-50 bg-[url('https://api.mapbox.com/styles/v1/mapbox/light-v10/static/-73.99,40.73,13,0/600x600?access_token=YOUR_TOKEN')] bg-cover bg-center">
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center p-8 text-center bg-primary/20 backdrop-blur-sm">
+                <div class="bg-white p-6 rounded-3xl shadow-xl">
+                  <span class="material-symbols-outlined text-primary text-4xl mb-2" style="">map</span>
+                  <p class="font-display text-xl text-slate-900" style="">
+                    Mapa Interativo
+                  </p>
+                  <p class="text-xs text-slate-500 font-bold uppercase tracking-widest mt-1" style="">
+                    Em Breve
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- Fun Footer -->
+      <footer class="mt-20 relative">
+
+        <div class="bg-white px-6 pt-16 pb-8 shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
+          <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-1">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="bg-primary p-2 rounded-xl text-white">
+                  <span class="material-symbols-outlined" style="">auto_fix_high</span>
+                </div>
+                <h2 class="font-display text-2xl text-primary font-black" style="">
+                  Papelaria Itapira
+                </h2>
+              </div>
+              <p class="text-slate-600 font-medium leading-relaxed" style="">
+                Sua referência em materiais escolares e papelaria em Itapira. Qualidade, variedade e atendimento que faz
+                a diferença.
+              </p>
+              <div class="flex gap-4 mt-6">
+                <a class="w-10 h-10 rounded-full bg-light-bg flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
+                  href="#" style=""><span class="material-symbols-outlined" style="">flutter_dash</span></a>
+                <a class="w-10 h-10 rounded-full bg-light-bg flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all"
+                  href="#" style=""><span class="material-symbols-outlined" style="">heart_plus</span></a>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-display text-xl text-slate-900 mb-6" style="">
+                Navegue
+              </h4>
+              <ul class="space-y-4">
+                <li class="" style="">
+                  <a class="text-slate-600 font-bold hover:text-primary transition-colors flex items-center gap-2"
+                    href="#" style="">Novidades
+                    <span class="w-2 h-2 rounded-full bg-accent"></span></a>
+                </li>
+                <li class="" style="">
+                  <a class="text-slate-600 font-bold hover:text-primary transition-colors" href="#" style="">Materiais
+                    Escolares</a>
+                </li>
+                <li class="" style="">
+                  <a class="text-slate-600 font-bold hover:text-primary transition-colors" href="#"
+                    style="">Escritório</a>
+                </li>
+                <li class="" style="">
+                  <a class="text-slate-600 font-bold hover:text-primary transition-colors" href="#"
+                    style="">Artesanato</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-display text-xl text-slate-900 mb-6" style="">
+                Atendimento
+              </h4>
+              <ul class="space-y-4">
+                <li class="" style="">
+                  <a class="text-slate-600 font-bold hover:text-primary transition-colors" href="#" style="">Horário de
+                    Funcionamento</a>
+                </li>
+                <li class="" style="">
+                  <a class="text-slate-600 font-bold hover:text-primary transition-colors" href="#"
+                    style="">Localização</a>
+                </li>
+                <li class="" style="">
+                  <a class="text-slate-600 font-bold hover:text-primary transition-colors" href="#" style="">FAQ</a>
+                </li>
+                <li class="" style="">
+                  <a class="text-slate-600 font-bold hover:text-primary transition-colors" href="#" style="">Fale
+                    Conosco</a>
+                </li>
+              </ul>
+            </div>
+            <div class="bg-primary/5 p-6 rounded-[2rem] border-2 border-primary/10">
+              <h4 class="font-display text-xl text-primary mb-4" style="">
+                Fique por Dentro
+              </h4>
+              <p class="text-slate-600 text-sm font-bold mb-6" style="">
+                Receba novidades, promoções e dicas direto no seu e-mail.
+              </p>
+              <div class="flex flex-col gap-3">
+                <input
+                  class="bg-white border-2 border-primary/20 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:outline-none focus:border-transparent"
+                  placeholder="seu@email.com" type="email" />
+                <button
+                  class="bg-primary text-white font-black py-3 rounded-xl hover:scale-105 transition-transform flex items-center justify-center gap-2 shadow-lg shadow-primary/20"
+                  style="">
+                  INSCREVER-SE
+                  <span class="material-symbols-outlined text-sm" style="">magic_button</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="max-w-7xl mx-auto mt-16 pt-8 border-t-2 border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400 font-bold">
+            <p class="" style="">
+              © 2025 Papelaria Itapira. Todos os direitos reservados.
+            </p>
+            <div class="flex gap-8">
+              <a class="hover:text-primary" href="#" style="">Privacidade</a>
+              <a class="hover:text-primary" href="#" style="">Termos</a>
+              <a class="hover:text-primary" href="#" style="">Cookies</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
