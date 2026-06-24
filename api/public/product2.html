@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Notebook Neon Dreams - Doodle Prism Stationery</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;family=DynaPuff:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#FBCFE8",
+                        "on-secondary-container": "#EE0CF2",
+                        "on-secondary-fixed-variant": "#C00AC4",
+                        "on-secondary-fixed": "#EE0CF2",
+                        "secondary": "#EE0CF2",
+                        "primary": "#7C05F2",
+                        "on-error": "#FFFFFF",
+                        "tertiary": "#14F20C",
+                        "on-surface": "#0F172A",
+                        "surface": "#F2F2F2",
+                        "tertiary-dim": "#8f2a46",
+                        "error": "#F25D07",
+                        "primary-container": "#7C05F2",
+                        "error-container": "#FFEDD5",
+                        "outline-variant": "#EE0CF2",
+                        "surface-dim": "#E5E5E5",
+                        "background": "#F2F2F2",
+                        "on-primary-container": "#FFFFFF",
+                        "on-surface-variant": "#475569",
+                        "tertiary-fixed": "#F0FDF4",
+                        "tertiary-container": "#DCFCE7",
+                        "on-error-container": "#F25D07",
+                        "on-tertiary-fixed": "#14F20C",
+                        "surface-container-low": "#F8F8F8",
+                        "on-tertiary-container": "#14F20C",
+                        "inverse-on-surface": "#F8FAFC",
+                        "surface-tint": "#7C05F2",
+                        "on-primary": "#FFFFFF",
+                        "inverse-surface": "#1E293B",
+                        "secondary-container": "#FDF2FD",
+                        "primary-fixed": "#F3E8FF",
+                        "surface-variant": "#F1F5F9",
+                        "secondary-dim": "#6e3495",
+                        "primary-fixed-dim": "#E9D5FF",
+                        "surface-container-high": "#EBEBEB",
+                        "outline": "#7C05F2",
+                        "tertiary-fixed-dim": "#DCFCE7",
+                        "secondary-fixed": "#FCE7F3",
+                        "on-background": "#0F172A",
+                        "on-primary-fixed-variant": "#5B04B1",
+                        "surface-bright": "#FFFFFF",
+                        "on-tertiary": "#0F172A",
+                        "primary-dim": "#6b00d4",
+                        "inverse-primary": "#D8B4FE",
+                        "surface-container-lowest": "#FFFFFF",
+                        "surface-container": "#F2F2F2",
+                        "on-secondary": "#FFFFFF",
+                        "on-primary-fixed": "#7C05F2",
+                        "on-tertiary-fixed-variant": "#0F9D09",
+                        "error-dim": "#a70138",
+                        "surface-container-highest": "#E0E0E0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": [
+                            "Plus Jakarta Sans", "sans-serif"
+                        ],
+                        "display": [
+                            "DynaPuff", "cursive"
+                        ],
+                        "body": [
+                            "Plus Jakarta Sans", "sans-serif"
+                        ],
+                        "label": [
+                            "Plus Jakarta Sans", "sans-serif"
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Organic Brutalism Utilities */
+        .wavy-underline {
+            text-decoration-style: wavy;
+            text-decoration-color: theme('colors.tertiary');
+            text-decoration-thickness: 3px;
+            text-underline-offset: 6px;
+        }
+
+        .shadow-offset {
+            box-shadow: 10px 10px 0px 0px theme('colors.primary');
+        }
+
+        .shadow-offset-tertiary {
+            box-shadow: 10px 10px 0px 0px #0da008;
+            /* Darker green offset for buttons */
+        }
+
+        .shadow-offset-hover:hover {
+            box-shadow: 4px 4px 0px 0px theme('colors.primary');
+            transform: translate(6px, 6px);
+        }
+
+        .shadow-offset-tertiary-hover:hover {
+            box-shadow: 0px 0px 0px 0px #0da008;
+            transform: translate(10px, 10px);
+        }
+
+        .organic-shape-1 {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+
+        .organic-shape-2 {
+            border-radius: 40% 60% 70% 30% / 50% 60% 30% 60%;
+        }
+
+        .skew-3 {
+            transform: skew(-3deg) rotate(-3deg);
+        }
+
+        .skew-reverse {
+            transform: skew(3deg) rotate(3deg);
+        }
+
+        /* Fluid Gradient Animation */
+        @keyframes flow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .bg-gradient-flow {
+            background: linear-gradient(-45deg, theme('colors.primary'), theme('colors.secondary'), theme('colors.tertiary'), #0da008);
+            background-size: 400% 400%;
+            animation: flow 15s ease infinite;
+        }
+
+        /* Noise Texture Overlay */
+        .noise-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body
+    class="bg-light-bg font-sans text-slate-900 selection:bg-accent selection:text-slate-900 overflow-x-hidden">
+    <!-- Background Blob Elements -->
+    <div class="relative flex h-auto min-h-screen w-full flex-col">
+      <div class="layout-container flex h-full grow flex-col">
+    <!-- TopNavBar Component -->
+   <header
+          class="flex items-center justify-between px-6 py-4 bg-white shadow-md border-b-2 border-primary/5 sticky top-0 z-50 w-full"
+        >
+          <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2 group cursor-pointer">
+              
+              <h2
+                class="text-primary font-display text-2xl font-black tracking-tight"
+                style=""
+              >
+                Papelaria Itapira
+              </h2>
+            </div>
+            <nav class="hidden lg:flex items-center gap-8">
+              <a
+                class="text-slate-700 hover:text-primary transition-colors text-sm font-bold flex flex-col items-center group"
+                href="#"
+                style=""
+              >
+                Home
+                <span
+                  class="h-1 w-0 bg-accent transition-all group-hover:w-full rounded-full"
+                ></span>
+              </a>
+              <a
+                class="text-slate-700 hover:text-primary transition-colors text-sm font-bold flex flex-col items-center group"
+                href="./vitrine"
+                style=""
+              >
+                Shop
+                <span
+                  class="h-1 w-0 bg-secondary transition-all group-hover:w-full rounded-full"
+                ></span>
+              </a>
+              <a
+                class="text-slate-700 hover:text-primary transition-colors text-sm font-bold flex flex-col items-center group"
+                href="#"
+                style=""
+              >
+                About
+                <span
+                  class="h-1 w-0 bg-warm transition-all group-hover:w-full rounded-full"
+                ></span>
+              </a>
+            </nav>
+          </div>
+          <div class="flex items-center gap-4">
+            <div
+              class="hidden sm:flex items-center bg-light-bg rounded-full px-4 py-2 border-2 border-transparent focus-within:border-primary transition-all"
+            >
+              <span class="material-symbols-outlined text-slate-400" style=""
+                >search</span
+              >
+              <input
+                class="bg-transparent border-none focus:ring-0 text-sm placeholder:text-slate-400 w-40"
+                placeholder="Find magic..."
+                type="text"
+              />
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="relative bg-secondary/10 text-secondary p-3 rounded-2xl hover:bg-secondary hover:text-white transition-all group"
+                style=""
+              >
+                <span class="material-symbols-outlined" style=""
+                  >shopping_bag</span
+                >
+                <span
+                  class="absolute -top-1 -right-1 bg-accent text-slate-900 text-[10px] font-black w-5 h-5 flex items-center justify-center rounded-full border-2 border-white"
+                  style=""
+                  >2</span
+                >
+              </button>
+              <button
+                class="bg-primary/10 text-primary p-3 rounded-2xl hover:bg-primary hover:text-white transition-all"
+                style=""
+              >
+                <span class="material-symbols-outlined" style=""
+                  >celebration</span
+                >
+              </button>
+            </div>
+          </div>
+        </header>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12 lg:py-16 relative">
+        <!-- Product Hero Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-start">
+            <!-- Product Imagery (Left) -->
+            <div class="relative group mb-6 lg:mb-0 lg:sticky lg:top-24">
+                <!-- Decorative Frame -->
+                <div
+                    class="absolute inset-0 bg-primary translate-x-2 translate-y-2 sm:translate-x-4 sm:translate-y-4 rounded-xl -rotate-2 group-hover:translate-x-4 group-hover:translate-y-4 sm:group-hover:translate-x-6 sm:group-hover:translate-y-6 transition-transform duration-300">
+                </div>
+                <div
+                    class="absolute inset-0 bg-gradient-flow opacity-50 blur-lg mix-blend-screen pointer-events-none rounded-xl">
+                </div>
+                <!-- Main Image Container -->
+                <div
+                    class="relative bg-surface-container-lowest rounded-xl border-4 border-primary p-3 sm:p-4 z-10 rotate-1 shadow-2xl transition-transform duration-300 group-hover:-rotate-1 mt-2 ml-2 sm:mt-0 sm:ml-0">
+                    <!-- Badges -->
+                    <div class="absolute top-4 -left-4 z-20 flex flex-col gap-2">
+                        <span
+                            class="bg-tertiary text-on-tertiary font-black px-4 py-2 text-sm uppercase tracking-widest border-2 border-on-surface -rotate-6 shadow-offset-tertiary">New
+                            Arrival</span>
+                        <span
+                            class="bg-secondary text-on-secondary font-black px-4 py-2 text-sm uppercase tracking-widest border-2 border-on-surface rotate-3 shadow-offset">Holographic</span>
+                    </div>
+                    <img alt="Notebook Neon Dreams"
+                        class="w-full h-auto aspect-[4/3] sm:aspect-square object-cover rounded-lg border-2 border-surface-container-highest"
+                        data-alt="A striking, high-quality product photograph of a modern, vibrant notebook with a highly reflective, holographic cover resting on a clean, light grey surface. The notebook is surrounded by playful, colorful stationery accessories like bright pink pens and neon green washi tape. The lighting is high-key and soft, creating a bright, modern light-mode aesthetic with crisp details and a tactile feel. The overall mood is creative, energetic, and expressive, perfectly capturing the 'Doodle Prism' brand identity."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF1-SZ0oxSKKKq-S5eJ8jPRvDOSbd4PT1SZtVDS8sVEzI2VKfxg0ZT0R_pfyj2S87nw0uEBBGb4Ss0C-xi922OhRp7ffxds5uY-GJ-kGCF6ALASzyAFsUK4WmiF8Tpy9kdKDGfgVeeYq93fuj4ZBW6BO8OKxcxwEclZPmYjC4Anb5U9v6OtJMYBTM1QQ5oLA3lDZ8lbd8aawtcjOcRxTCtK_zurIyIXewSalyC3aKR8sjOyZwDb9U_1Pf2goeWYlF2BWykz8vg37A" />
+                    <!-- Thumbnails -->
+                    <div class="flex gap-4 mt-6 justify-center">
+                        <button
+                            class="w-20 h-20 border-4 border-primary rounded-lg overflow-hidden relative shadow-offset-hover transition-all bg-surface-bright focus:outline-none focus:ring-4 focus:ring-tertiary">
+                            <img alt="Thumbnail 1" class="w-full h-full object-cover"
+                                data-alt="Close up shot of the holographic cover of the Notebook Neon Dreams showing its vibrant, rainbow-like reflections under bright studio lighting."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhUyCqN9sbsvBIgduWV3THJq_M_veJT1Ry79rdAlYUlVAIHjrfnioJv6z1Qruthk2Y0EQFWf1wT5ivY1ILGTbaMwJnN2hQpilJXKBvj3GX4izjkHtqUiE4fYhuLWA-I5NUof57zagnhIlr4B2mdWbXdaCNIvQ0-Uq8Nzbli9HMVUDA6lL_ggHywDhqjBCOWGBBljG96krlbmjhqTdVLV1RtXNLB-2m_GlSqpFTpLusuQwG5jM7ONFpqYVSfAhvAxcssCXWXrduIp0" />
+                        </button>
+                        <button
+                            class="w-20 h-20 border-4 border-surface-container-highest rounded-lg overflow-hidden relative hover:border-secondary transition-all opacity-70 hover:opacity-100 bg-surface-bright focus:outline-none focus:ring-4 focus:ring-tertiary">
+                            <img alt="Thumbnail 2" class="w-full h-full object-cover"
+                                data-alt="An open spread of the Notebook Neon Dreams revealing thick, high-quality blank white pages perfect for drawing or journaling, illuminated by soft, bright lighting."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmbY0BXNf9-XkGlNDZpnM6Ruo10887PJ04A0XLV7LrnFubfbeQY3pxUEicfbmQeDxsSeJaLOJesvHC6J6GZy6HPBrZ7rIARUxDc62ZX5LdWsuKk3FUqH4PO3xl074tKYwm2Pj20Ocs6TxCUicGijK8SKfcriRieVLF74Ti49QSiU12XxmM6mb6ES28MFCqOsPuYJsZokRNWh3sU_qaABxkxkr2PfT9OYLNXUAZj-1PEQkWavcJkk5PmmCVtRSjpyve77DfLa83Jpg" />
+                        </button>
+                        <button
+                            class="w-20 h-20 border-4 border-surface-container-highest rounded-lg overflow-hidden relative hover:border-secondary transition-all opacity-70 hover:opacity-100 bg-surface-bright focus:outline-none focus:ring-4 focus:ring-tertiary">
+                            <img alt="Thumbnail 3" class="w-full h-full object-cover"
+                                data-alt="Detailed macro shot of the spiral binding of the Notebook Neon Dreams, highlighting its sturdy, metallic construction against a bright, creative backdrop."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAV40JUoPKZCj9ARXsmVIQAn0vzYRKmsm8Z-kPWFoD4_PEogSMqvmYamH-ivAthzC6pfGaIC73y6b_K_pynsI_6PxUva4hLvZqg-PxO7OSiptelaEYiRvNdKP86sc6mNAm1nmfHHErYZDiyGQ0YqIWVodnBS2WOQon1aPIAFSE91UaLjTMp7g9UKVSabMETIwr6kVEN0xKDOAfZ4Cf9_CLvde_3vU8cFqbpMXjmnh_6K83Pm-g3_zciq02-dUUA5co9O94OylWbF8" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Details (Right) -->
+            <div class="flex flex-col gap-4 md:gap-6 relative z-10">
+                <div class="space-y-2">
+                    <p
+                        class="text-primary font-bold tracking-widest uppercase text-sm -skew-x-6 inline-block bg-primary/10 px-3 py-1 organic-shape-2">
+                        Notebooks</p>
+                    <h1
+                        class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-on-surface leading-tight tracking-tight">
+                        Notebook <br />
+                        <span class="text-secondary wavy-underline">Neon Dreams</span>
+                    </h1>
+                </div>
+                <div class="flex items-baseline gap-4 mt-2">
+                    <span class="font-display text-4xl font-black text-on-surface">R$ 89,90</span>
+                    <span class="text-on-surface-variant line-through font-bold">R$ 119,90</span>
+                </div>
+                <p
+                    class="font-body text-lg text-on-surface-variant leading-relaxed border-l-4 border-tertiary pl-4 py-2 bg-surface-container-lowest/50">
+                    Transforme seus rabiscos em arte com este caderno de capa holográfica e páginas de alta gramatura.
+                    Perfeito para bullet journal e mentes criativas.
+                </p>
+                <!-- Actions Container -->
+                <div
+                    class="bg-surface-container-lowest border-4 border-primary rounded-2xl p-4 sm:p-6 shadow-offset mt-4 relative">
+                    <!-- Floating decorative icon -->
+                    <span
+                        class="material-symbols-outlined absolute -top-6 -right-6 text-6xl text-tertiary drop-shadow-lg rotate-12 bg-white rounded-full p-2 border-2 border-tertiary">star</span>
+                    <div class="flex flex-col sm:flex-row gap-6 items-end">
+                        <!-- Quantity Selector -->
+                        <div class="w-full sm:w-auto">
+                            <label
+                                class="block text-sm font-bold text-primary uppercase tracking-wider mb-2">Quantity</label>
+                            <div
+                                class="flex items-center border-4 border-on-surface rounded-full bg-surface-bright overflow-hidden">
+                                <button aria-label="Decrease quantity"
+                                    class="px-4 py-3 hover:bg-surface-container-high hover:text-secondary transition-colors font-black text-xl">-</button>
+                                <input aria-label="Quantity"
+                                    class="w-16 text-center border-none font-bold text-lg bg-transparent focus:ring-0 p-0"
+                                    min="1" type="number" value="1" />
+                                <button aria-label="Increase quantity"
+                                    class="px-4 py-3 hover:bg-surface-container-high hover:text-secondary transition-colors font-black text-xl">+</button>
+                            </div>
+                        </div>
+                        <!-- Primary CTA -->
+                        <button
+                            class="flex-1 w-full bg-tertiary text-on-tertiary hover:bg-tertiary-container border-4 border-on-surface rounded-full py-3 sm:py-4 px-4 sm:px-6 font-display font-black text-base sm:text-xl uppercase tracking-widest shadow-offset-tertiary transition-all shadow-offset-tertiary-hover flex items-center justify-center gap-2 sm:gap-3 group">
+                            <span
+                                class="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform duration-300">chat</span>
+                            Comprar via WhatsApp
+                        </button>
+                    </div>
+                </div>
+                <!-- Product Specifications -->
+                <div class="mt-8 border-t-4 border-dashed border-primary/30 pt-8">
+                    <h3 class="font-display text-2xl font-black text-primary mb-6 flex items-center gap-2">
+                        <span class="material-symbols-outlined">straighten</span>
+                        Product Specifications
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div
+                            class="bg-surface-bright border-2 border-primary/20 rounded-xl p-4 flex items-center gap-4 hover:border-secondary transition-colors group">
+                            <div
+                                class="bg-primary/10 p-3 rounded-full text-primary group-hover:bg-secondary/20 group-hover:text-secondary transition-colors">
+                                <span class="material-symbols-outlined">crop_portrait</span>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-on-surface-variant uppercase">Size</p>
+                                <p class="font-bold text-on-surface">A5 (148 x 210mm)</p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-surface-bright border-2 border-primary/20 rounded-xl p-4 flex items-center gap-4 hover:border-secondary transition-colors group">
+                            <div
+                                class="bg-primary/10 p-3 rounded-full text-primary group-hover:bg-secondary/20 group-hover:text-secondary transition-colors">
+                                <span class="material-symbols-outlined">auto_stories</span>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-on-surface-variant uppercase">Pages</p>
+                                <p class="font-bold text-on-surface">160</p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-surface-bright border-2 border-primary/20 rounded-xl p-4 flex items-center gap-4 hover:border-secondary transition-colors group">
+                            <div
+                                class="bg-primary/10 p-3 rounded-full text-primary group-hover:bg-secondary/20 group-hover:text-secondary transition-colors">
+                                <span class="material-symbols-outlined">description</span>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-on-surface-variant uppercase">Paper</p>
+                                <p class="font-bold text-on-surface">120g/m² (No bleeding)</p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-surface-bright border-2 border-primary/20 rounded-xl p-4 flex items-center gap-4 hover:border-secondary transition-colors group">
+                            <div
+                                class="bg-primary/10 p-3 rounded-full text-primary group-hover:bg-secondary/20 group-hover:text-secondary transition-colors">
+                                <span class="material-symbols-outlined">diamond</span>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-on-surface-variant uppercase">Cover</p>
+                                <p class="font-bold text-on-surface">Hardcover Holographic</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- You Might Also Like Section (Bento Grid Style) -->
+        <section class="mt-16 md:mt-24 lg:mt-32 relative">
+            <!-- Background Decoration -->
+            <div
+                class="absolute -top-16 right-0 w-64 h-64 bg-secondary opacity-10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div class="flex items-center justify-between mb-12">
+                <h2 class="font-display text-4xl font-black text-on-surface inline-block relative z-10">
+                    You Might Also <span class="text-primary italic">Like</span>
+                    <!-- Decorative swoosh -->
+                    <svg class="absolute -bottom-4 left-0 w-full h-4 text-tertiary z-[-1]" preserveaspectratio="none"
+                        viewbox="0 0 100 20">
+                        <path d="M0,10 Q50,20 100,5" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-width="4"></path>
+                    </svg>
+                </h2>
+                <a class="hidden sm:flex items-center gap-2 font-bold text-secondary hover:text-primary transition-colors underline decoration-wavy decoration-2 underline-offset-4"
+                    href="#">
+                    View All <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div
+                    class="group relative block h-full bg-surface-container-lowest rounded-[2rem] border-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] hover:shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 overflow-hidden flex flex-col -rotate-1 hover:rotate-0">
+                    <div class="h-48 relative overflow-hidden bg-primary-fixed border-b-4 border-on-surface p-4">
+                        <img alt="Washi Tape Set"
+                            class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+                            data-alt="A collection of colorful, patterned washi tapes scattered playfully on a light background. High-key lighting highlights the intricate designs and vibrant colors, fitting the bright and creative Doodle Prism aesthetic."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqlVaDbhcAGUFsBi95V8h79rfOnkKkL4TTB7uKSIVKhrGbpWDvgvEj00LGZn3lzjKkF-oVys7zuS3aRH0crHvzwToW0BbvgsOT2QmmG4bPdqiYltYf1tmaSPqr3MOjLuktA_NyUsPWuAvQ98x5PSKYPMW57B9cZoC0ye1W74AGbOSVpnrYdXK5fEmpb_iiSLuPeOuOHH3fCcB1RNB13qe8-p0bX5nidCJJ7I6kYTJsoXZWWcXs1X9SkVeM7SlUPSNyKQdO3Ise5Uk" />
+                        <span
+                            class="absolute top-2 right-2 bg-white font-black text-xs px-3 py-1 rounded-full border-2 border-on-surface rotate-3">Bestseller</span>
+                    </div>
+                    <div
+                        class="p-6 flex flex-col flex-grow bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNlN2U1ZTQiLz48L3N2Zz4=')]">
+                        <p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Accessories</p>
+                        <h3 class="font-display font-black text-xl mb-2 group-hover:text-secondary transition-colors">
+                            Cosmic Washi Tape Set</h3>
+                        <p class="font-bold text-lg text-on-surface mt-auto">R$ 45,00</p>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div
+                    class="group relative block h-full bg-surface-container-lowest rounded-[2rem] border-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(124,5,242,1)] hover:shadow-[4px_4px_0px_0px_rgba(124,5,242,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 overflow-hidden flex flex-col translate-y-4 hover:translate-y-2">
+                    <div class="h-48 relative overflow-hidden bg-secondary-fixed border-b-4 border-on-surface p-4">
+                        <img alt="Neon Gel Pens"
+                            class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500 mix-blend-multiply"
+                            data-alt="A set of vibrant neon gel pens arranged in an artistic, fan-like pattern on a pristine white surface. The bright studio lighting emphasizes the saturated colors of the pens, perfectly aligning with the high-energy, creative Doodle Prism design system."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnK6d2ps6r07cRljjK0o0nhd-dcmU6zPPGjGf0DXqZWjX_CXojrS2peRkU6NVLq2PLpFRwOAUj0uZjGg6BYdyb6b7WLS0hdTBkphmZyPt-UEHEcK11um0vxNtwltYox-yh7rxikV9zH1Tox0RhRubnm2wUWf9vXKSATTY4npwIH1POykO6hUnCeRauOZS7KQOmIhYYDk-NKUeryaIr-GlVSzvpy510jTVqC2VrX3s8qs2opXWJerDIX6tANsNNZimdq2y85zpx5Ro" />
+                    </div>
+                    <div
+                        class="p-6 flex flex-col flex-grow bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNlN2U1ZTQiLz48L3N2Zz4=')]">
+                        <p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Writing</p>
+                        <h3 class="font-display font-black text-xl mb-2 group-hover:text-primary transition-colors">Neon
+                            Flow Gel Pens (6-Pack)</h3>
+                        <p class="font-bold text-lg text-on-surface mt-auto">R$ 55,90</p>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div
+                    class="group relative block h-full bg-surface-container-lowest rounded-[2rem] border-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(20,242,12,1)] hover:shadow-[4px_4px_0px_0px_rgba(20,242,12,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 overflow-hidden flex flex-col rotate-2 hover:rotate-1">
+                    <div class="h-48 relative overflow-hidden bg-tertiary-fixed border-b-4 border-on-surface p-4">
+                        <img alt="Sticker Pack"
+                            class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+                            data-alt="A dynamic, scattered arrangement of quirky, colorful die-cut stickers featuring various fun illustrations. Photographed top-down on a light background with strong, playful lighting to enhance the tactile, crafty feel of the Doodle Prism brand."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFIewxXm18p3crBeDyBCC_UJjGScjxNThix2vscwmCoz_NHuFD03zQM2Hqhivn-jn0hV8iqZHd0mVXVPe_sQQbZd2azPUc0Nfp2tvr9t1Pj_uTaIAGwU27SouuwHWk4TnJiqB4Mwty7KQI1hcmV5xk3Ubna2iidN_vqu-TrjInzK9-bKmInYa7WaAWwoD0-2POFx5dDTcUUet0MxtN_ibxuQlYn7cpRIBVhzveVwyGLGl-VI_7kOg2WAQma8iuuWJiVwLt7Hfxk0M" />
+                    </div>
+                    <div
+                        class="p-6 flex flex-col flex-grow bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNlN2U1ZTQiLz48L3N2Zz4=')]">
+                        <p class="text-xs font-bold text-tertiary uppercase tracking-widest mb-1">Decor</p>
+                        <h3 class="font-display font-black text-xl mb-2 group-hover:text-tertiary transition-colors">
+                            Vibes Only Sticker Pack</h3>
+                        <p class="font-bold text-lg text-on-surface mt-auto">R$ 29,90</p>
+                    </div>
+                </div>
+            </div>
+            <a class="sm:hidden mt-8 flex items-center justify-center gap-2 font-bold text-secondary hover:text-primary transition-colors underline decoration-wavy decoration-2 underline-offset-4"
+                href="#">
+                View All <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+        </section>
+    </main>
+    <!-- Fun Footer -->
+        <footer class="mt-20 relative">
+          <!-- Wavy transition -->
+          <div
+            class="absolute top-0 left-0 w-full overflow-hidden leading-[0] transform -translate-y-[99%]"
+          >
+            <svg
+              class="relative block w-full h-[60px] fill-white"
+              preserveAspectRatio="none"
+              viewBox="0 0 1200 120"
+            >
+              <path
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              ></path>
+            </svg>
+          </div>
+          <div
+            class="bg-white px-6 pt-16 pb-8 shadow-[0_-10px_30px_rgba(0,0,0,0.05)]"
+          >
+            <div
+              class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12"
+            >
+              <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center gap-3 mb-6">
+                  <div class="bg-primary p-2 rounded-xl text-white">
+                    <span class="material-symbols-outlined" style=""
+                      >auto_fix_high</span
+                    >
+                  </div>
+                  <h2
+                    class="font-display text-2xl text-primary font-black"
+                    style=""
+                  >
+                    Papelaria
+                  </h2>
+                </div>
+                <p class="text-slate-600 font-medium leading-relaxed" style="">
+                  Crafting joy and fueling creativity since 2024. Your world
+                  deserves a splash of color!
+                </p>
+                <div class="flex gap-4 mt-6">
+                  <a
+                    class="w-10 h-10 rounded-full bg-light-bg flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
+                    href="#"
+                    style=""
+                    ><span class="material-symbols-outlined" style=""
+                      >flutter_dash</span
+                    ></a
+                  >
+                  <a
+                    class="w-10 h-10 rounded-full bg-light-bg flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all"
+                    href="#"
+                    style=""
+                    ><span class="material-symbols-outlined" style=""
+                      >heart_plus</span
+                    ></a
+                  >
+                </div>
+              </div>
+              <div>
+                <h4 class="font-display text-xl text-slate-900 mb-6" style="">
+                  Explore
+                </h4>
+                <ul class="space-y-4">
+                  <li class="" style="">
+                    <a
+                      class="text-slate-600 font-bold hover:text-primary transition-colors flex items-center gap-2"
+                      href="#"
+                      style=""
+                      >New Drops
+                      <span class="w-2 h-2 rounded-full bg-accent"></span
+                    ></a>
+                  </li>
+                  <li class="" style="">
+                    <a
+                      class="text-slate-600 font-bold hover:text-primary transition-colors"
+                      href="#"
+                      style=""
+                      >Wholesale</a
+                    >
+                  </li>
+                  <li class="" style="">
+                    <a
+                      class="text-slate-600 font-bold hover:text-primary transition-colors"
+                      href="#"
+                      style=""
+                      >Workshops</a
+                    >
+                  </li>
+                  <li class="" style="">
+                    <a
+                      class="text-slate-600 font-bold hover:text-primary transition-colors"
+                      href="#"
+                      style=""
+                      >Collaborations</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-display text-xl text-slate-900 mb-6" style="">
+                  Support
+                </h4>
+                <ul class="space-y-4">
+                  <li class="" style="">
+                    <a
+                      class="text-slate-600 font-bold hover:text-primary transition-colors"
+                      href="#"
+                      style=""
+                      >Shipping</a
+                    >
+                  </li>
+                  <li class="" style="">
+                    <a
+                      class="text-slate-600 font-bold hover:text-primary transition-colors"
+                      href="#"
+                      style=""
+                      >Returns</a
+                    >
+                  </li>
+                  <li class="" style="">
+                    <a
+                      class="text-slate-600 font-bold hover:text-primary transition-colors"
+                      href="#"
+                      style=""
+                      >FAQ</a
+                    >
+                  </li>
+                  <li class="" style="">
+                    <a
+                      class="text-slate-600 font-bold hover:text-primary transition-colors"
+                      href="#"
+                      style=""
+                      >Help Desk</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="bg-primary/5 p-6 rounded-[2rem] border-2 border-primary/10"
+              >
+                <h4 class="font-display text-xl text-primary mb-4" style="">
+                  Stay Inspired
+                </h4>
+                <p class="text-slate-600 text-sm font-bold mb-6" style="">
+                  Join our newsletter for creative tips and secret drops.
+                </p>
+                <div class="flex flex-col gap-3">
+                  <input
+                    class="bg-white border-2 border-primary/20 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:outline-none focus:border-transparent"
+                    placeholder="your@email.com"
+                    type="email"
+                  />
+                  <button
+                    class="bg-primary text-white font-black py-3 rounded-xl hover:scale-105 transition-transform flex items-center justify-center gap-2 shadow-lg shadow-primary/20"
+                    style=""
+                  >
+                    SUBSCRIBE
+                    <span class="material-symbols-outlined text-sm" style=""
+                      >magic_button</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-w-7xl mx-auto mt-16 pt-8 border-t-2 border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400 font-bold"
+            >
+              <p class="" style="">
+                © 2024 Papelaria Criativa. Spread the magic.
+              </p>
+              <div class="flex gap-8">
+                <a class="hover:text-primary" href="#" style="">Privacy</a>
+                <a class="hover:text-primary" href="#" style="">Terms</a>
+                <a class="hover:text-primary" href="#" style="">Cookies</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+    <script>
+        // Simple script to handle thumbnail image swapping
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainImage = document.querySelector('img[alt="Notebook Neon Dreams"]');
+            const thumbnails = document.querySelectorAll('button img[alt^="Thumbnail"]');
+
+            thumbnails.forEach(thumb => {
+                thumb.parentElement.addEventListener('click', () => {
+                    const tempSrc = mainImage.src;
+                    mainImage.src = thumb.src;
+                    thumb.src = tempSrc;
+
+                    // Add a tiny bump animation
+                    mainImage.classList.add('scale-[0.98]', 'opacity-80');
+                    setTimeout(() => {
+                        mainImage.classList.remove('scale-[0.98]', 'opacity-80');
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
