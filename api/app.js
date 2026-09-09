@@ -9,7 +9,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Importando rotas
-import productRoutes from "./routes/product.js";
+import adminRoutes from "./routes/product.js";
+import publicRoutes from "./routes/public/static/public.js";
+import authRoutes from "./routes/public/auth/auth.js";
 
 // Instanciando servidor express
 const app = express();
@@ -20,12 +22,11 @@ dotenv.config();
 // Middlewares
 app.use(cors());
 app.use(express.json());
-// Rotas
 
+// Rotas
 app.use(express.static(path.join(__dirname, 'public')));
-app.use("/vitrine", express.static(path.join(__dirname, 'public/vitrine.html')));
-app.use("/product", express.static(path.join(__dirname, 'public/product.html')));
-app.use("/product2", express.static(path.join(__dirname, 'public/product2.html')));
+app.use("/", publicRoutes);
+app.use("/auth", authRoutes);
 
 // Ligando server
 
