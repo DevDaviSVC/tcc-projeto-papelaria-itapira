@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 // Importando rotas
 import adminRoutes from "./routes/product.js";
 import publicRoutes from "./routes/public/static/public.js";
-import authRoutes from "./routes/public/auth/auth.js";
+import authRoutes from "./routes/auth/auth.js";
 
 // Instanciando servidor express
 const app = express();
