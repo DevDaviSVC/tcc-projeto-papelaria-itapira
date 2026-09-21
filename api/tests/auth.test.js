@@ -66,6 +66,15 @@ test("Express entrega landing, assets e rotas React sem interceptar a API", asyn
     assert.equal((await fetch(`${baseUrl}/app-assets/nonexistent.js`)).status, 404);
     assert.equal((await me()).status, 401);
     assert.equal((await fetch(`${baseUrl}/admin/products`)).status, 401);
+    for (const route of ['/unknown', '/auth/unknown', '/app-assets/missing.js', '/assets/missing']) {
+        const response = await fetch(baseUrl + route, { headers: { Accept: 'text/html' } });
+        assert.equal(response.status, 404, route);
+        assert.match(response.headers.get('content-type'), /application\/json/, route);
+        assert.doesNotMatch(await response.text(), /id="root"/, route);
+    }
+    const reactNotFound = await fetch(`${baseUrl}/vitrine/unknown`);
+    assert.equal(reactNotFound.status, 404);
+    assert.match(await reactNotFound.text(), /id="root"/);
 });
 
 test('páginas públicas entregam conteúdo e SEO sem executar JavaScript', async () => {

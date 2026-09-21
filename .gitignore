@@ -1,3 +1,11 @@
 skills-lock.json
 prod-ca-2021.crt
 .agents
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+dist-ssr/
+*.log
+.deploy-check/

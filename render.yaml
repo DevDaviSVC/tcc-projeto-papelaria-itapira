@@ -1,0 +1,29 @@
+# Um único Web Service; o banco permanece no Supabase.
+# Cadastre o certificado manualmente em Environment > Secret Files.
+services:
+  - type: web
+    name: papelaria-itapira-demo
+    runtime: node
+    plan: free
+    buildCommand: npm ci --prefix api && npm ci --prefix frontend/vitrine --include=dev && npm run build --prefix frontend/vitrine && npm test --prefix api
+    startCommand: npm start --prefix api
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: "5432"
+      - key: DB_NAME
+        value: postgres
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_SSL_CA_PATH
+        value: /etc/secrets/prod-ca-2021.crt
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_EXPIRES_IN
+        value: 1h

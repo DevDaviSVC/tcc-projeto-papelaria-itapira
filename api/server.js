@@ -5,7 +5,7 @@ import { getAuthConfig } from "./config/auth.js";
 try {
     getAuthConfig();
     await checkDatabaseConnection();
-    const server = app.listen(process.env.PORT || 3000, () => {
+    const server = app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
         console.log(`Banco conectado. Servidor ligado na porta ${server.address().port}!`);
     });
     server.on('error', async (error) => {
