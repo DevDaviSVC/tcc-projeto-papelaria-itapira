@@ -1,0 +1,187 @@
+{
+  "demo": true,
+  "products": [
+    {
+      "id": "caderno-sonho-neon",
+      "name": "Caderno Sonho Neon",
+      "category": "cadernos",
+      "categoryLabel": "Cadernos e Agendas",
+      "price": 89.9,
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBKQiuC8AAqqXDZ9AaJu6VvTn1z_LCtPldph6qlVe3zw4YZjFlJstqDA2i7YmiiYf__JGLXdIQ__r-7rXyMx2_9rQZbg6i384aP9P8i-q7v6BKcWYeZKaOdE9xG1ITSkhjvEcsP1oBtFBGZ3qptMyXh6qbT_UQzSF0ABEM3BiZ9PdM93rFrxA_bG7Qs-lJ-sEOXWAPDnSwzwNhhb-BRwhJZSiRbT2BQNml3nP-XPn8tPNdydSvmm6sKzvM2XoPNKtO43pkDUNFhWcY",
+      "alt": "Caderno com capa dura em tons de rosa e roxo neon sobre superfície branca",
+      "badge": "Tendência",
+      "description": "Capa dura resistente e folhas lisinhas pra escrever sem esforço. O queridinho de quem quer estudar com estilo.",
+      "featured": true,
+      "images": [
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuBKQiuC8AAqqXDZ9AaJu6VvTn1z_LCtPldph6qlVe3zw4YZjFlJstqDA2i7YmiiYf__JGLXdIQ__r-7rXyMx2_9rQZbg6i384aP9P8i-q7v6BKcWYeZKaOdE9xG1ITSkhjvEcsP1oBtFBGZ3qptMyXh6qbT_UQzSF0ABEM3BiZ9PdM93rFrxA_bG7Qs-lJ-sEOXWAPDnSwzwNhhb-BRwhJZSiRbT2BQNml3nP-XPn8tPNdydSvmm6sKzvM2XoPNKtO43pkDUNFhWcY",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuCF1-SZ0oxSKKKq-S5eJ8jPRvDOSbd4PT1SZtVDS8sVEzI2VKfxg0ZT0R_pfyj2S87nw0uEBBGb4Ss0C-xi922OhRp7ffxds5uY-GJ-kGCF6ALASzyAFsUK4WmiF8Tpy9kdKDGfgVeeYq93fuj4ZBW6BO8OKxcxwEclZPmYjC4Anb5U9v6OtJMYBTM1QQ5oLA3lDZ8lbd8aawtcjOcRxTCtK_zurIyIXewSalyC3aKR8sjOyZwDb9U_1Pf2goeWYlF2BWykz8vg37A",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuAhUyCqN9sbsvBIgduWV3THJq_M_veJT1Ry79rdAlYUlVAIHjrfnioJv6z1Qruthk2Y0EQFWf1wT5ivY1ILGTbaMwJnN2hQpilJXKBvj3GX4izjkHtqUiE4fYhuLWA-I5NUof57zagnhIlr4B2mdWbXdaCNIvQ0-Uq8Nzbli9HMVUDA6lL_ggHywDhqjBCOWGBBljG96krlbmjhqTdVLV1RtXNLB-2m_GlSqpFTpLusuQwG5jM7ONFpqYVSfAhvAxcssCXWXrduIp0",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuCmbY0BXNf9-XkGlNDZpnM6Ruo10887PJ04A0XLV7LrnFubfbeQY3pxUEicfbmQeDxsSeJaLOJesvHC6J6GZy6HPBrZ7rIARUxDc62ZX5LdWsuKk3FUqH4PO3xl074tKYwm2Pj20Ocs6TxCUicGijK8SKfcriRieVLF74Ti49QSiU12XxmM6mb6ES28MFCqOsPuYJsZokRNWh3sU_qaABxkxkr2PfT9OYLNXUAZj-1PEQkWavcJkk5PmmCVtRSjpyve77DfLa83Jpg",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuBAV40JUoPKZCj9ARXsmVIQAn0vzYRKmsm8Z-kPWFoD4_PEogSMqvmYamH-ivAthzC6pfGaIC73y6b_K_pynsI_6PxUva4hLvZqg-PxO7OSiptelaEYiRvNdKP86sc6mNAm1nmfHHErYZDiyGQ0YqIWVodnBS2WOQon1aPIAFSE91UaLjTMp7g9UKVSabMETIwr6kVEN0xKDOAfZ4Cf9_CLvde_3vU8cFqbpMXjmnh_6K83Pm-g3_zciq02-dUUA5co9O94OylWbF8"
+      ]
+    },
+    {
+      "id": "kit-washi-galaxia",
+      "name": "Kit Fita Washi Galáxia",
+      "category": "washi",
+      "categoryLabel": "Fitas Washi",
+      "price": 45,
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBCXi69tZGzE68kLubCV6xwjzw6bfT9igU8PMSCtZytWSZryETTTtbIS1pA9oAA2-0aRKw5idR2GBdee9T1b7W_2xyDoEcSnnrNP6T0UJxScdbGRRp5KDuIPGxLctj-_b1ZzVJQte_NtATBGEyXZq8j9zzGP6uwYNoX6anrKLCNdBy4ilkzpsKPCdJiuegb3LyGIxZ9OIlsRzlbyTBNN8YFF12-A9GMwiMMu-0gm0-PFEHvoT0jIVad4r57o0wSPHxBxzzAhBOtXS4",
+      "alt": "Conjunto de fitas washi decorativas com estampas e detalhes dourados",
+      "badge": "Novo",
+      "description": "Estampas exclusivas com toque dourado pra deixar qualquer caderno ou planner com a sua cara.",
+      "featured": true
+    },
+    {
+      "id": "caneta-tinteiro-royal",
+      "name": "Caneta Tinteiro Royal",
+      "category": "canetas",
+      "categoryLabel": "Canetas e Tintas",
+      "price": 120,
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAp-4cuoSSMDBReC6THMadSl7M3aHHusWNA3PqBcc-D6PaT_QJLKuPHnUx9bN6dgrMJQ_LnMTjGmF5T7NN7HgGx71cARutKYLEI4hDVLONp4p3sYJmMyireEpnfgte2uvChd9Cqz3InkDUQ5y_4IkmASYo7nWI0poRGqS0dUCVqyc1DzP8vGf8Ld92Wvp-9ce8viBBRhxEgDmG0G7-fpDEnf2qiCHQWLqzBkDzLUUosnIheKR_bktD2NJ52zViHAmDjugoFr5UPTxU",
+      "alt": "Caneta tinteiro roxa elegante com detalhes dourados sobre papel texturizado",
+      "badge": "Oferta",
+      "description": "Escrita suave e visual sofisticado. Um mimo pra você ou pra presentear alguém especial.",
+      "featured": true
+    },
+    {
+      "id": "adesivos-prismaticos",
+      "name": "Adesivos Prismáticos",
+      "category": "adesivos",
+      "categoryLabel": "Adesivos",
+      "price": 29.9,
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCAQ-tj0YeMBhrc425WPh0qeZSGOvjBp4jt-ZIojQTAyQO455rwHvtE8Asgpot6veWY3HGOE_DYr2THzfBo8h0JO29RHsDbkg6-brWC8LqprlGjMAgUKfyL9Iqq70B5WnO7XBDcrGesSSV-a0sRzV58Q7CJkBX3-rMo2Xk4X0HB92Pp8iqaPXhZQu4RkhWuBibz37djVdntKbpPhG-zYU5zLR8p1rPtf823HE9nb5CZgn6EDInGNeSt3ks0_wuvdK_FBobcvAaMgto",
+      "alt": "Adesivos holográficos coloridos com estrelas, planetas e carinhas sorridentes",
+      "badge": "",
+      "description": "Cartela de adesivos holográficos cheios de personalidade pra grudar em cadernos, agendas e onde mais a criatividade mandar.",
+      "featured": false
+    },
+    {
+      "id": "sketchbook-profissional",
+      "name": "Sketchbook Profissional",
+      "category": "cadernos",
+      "categoryLabel": "Cadernos e Agendas",
+      "price": 159,
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBFvyPx_s94PfNdkPVnLNK2Drq5btPFrHPgJrPnjBDjOehHjS_4STzwBEURC9Z3-R-3j2qcEp3o-aSq_ZbstUxjk28B5e2Yphqm8-XKNj4YsfM_GqO4CEnEx8WOWlt0dy7jnG9TokF6kYaILy0AYup6A5ptzQ27SUzijhfXbAXLTeHfzcgOjG66fRCfZ72khE_drYIIdYulOBOHK9A3xUMQJyCx5_HOac104uBpRRk7mFGmW9AOUd7YwWffiIAIfPW7icvjBRvqo58",
+      "alt": "Sketchbook de arte com capa dura aberto em página em branco ao lado de lápis grafite",
+      "badge": "",
+      "description": "Papel de alta gramatura que aguenta lápis, aquarela e técnica mista sem enrugar. Pra ideias que não cabem só na cabeça.",
+      "featured": false
+    },
+    {
+      "id": "tinta-violeta-profunda",
+      "name": "Tinta Violeta Profunda",
+      "category": "canetas",
+      "categoryLabel": "Canetas e Tintas",
+      "price": 54,
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDXj3LgR-fD29NuYx0Sip1T0O4WX4omYeQcS_V2RTQuZvnldPGnuACUbknMPwOnuuN2co76sPksj98qTFDW92E7E_24sONzm3v-FfkmxQ-VATVq7_41mosTajnlqtESmAEylVB9iWFblAXoC2EkL8DvTT2XogYVI7cZoQFdX9LCsuA117Np03WlDawVtKCQFjmJpKJEhyBZmYrYO1o8JvZEnJ3zVjlg6tke21x5LjaJhv6mkKoVMJLOdTr12XduQ3YNh_nw-Qucu48",
+      "alt": "Frasco de tinta roxa em estilo vintage ao lado de uma pena de escrever",
+      "badge": "",
+      "description": "Pigmentação intensa e secagem rápida. Pra escrita e desenho ganharem um toque de cor que ninguém mais tem.",
+      "featured": false
+    },
+    {
+      "id": "estojo-multicolor",
+      "name": "Estojo Divertido Multicolor",
+      "category": "escritorio",
+      "categoryLabel": "Material Escolar",
+      "price": 39.9,
+      "icon": "inventory_2",
+      "badge": "Novo",
+      "description": "Compartimentos espertos pra organizar tudo e ainda combinar com o resto do material. Prático e cheio de cor.",
+      "featured": true
+    },
+    {
+      "id": "mochila-aventura-kids",
+      "name": "Mochila Aventura Kids",
+      "category": "escritorio",
+      "categoryLabel": "Material Escolar",
+      "price": 189.9,
+      "icon": "backpack",
+      "badge": "Destaque",
+      "description": "Resistente, confortável nas costas e com espaço de sobra pra levar tudo sem esforço. Feita pra aguentar a rotina toda.",
+      "featured": true
+    },
+    {
+      "id": "lapis-de-cor-24",
+      "name": "Lápis de Cor 24 Cores",
+      "category": "arte",
+      "categoryLabel": "Arte e Pintura",
+      "price": 49.9,
+      "icon": "palette",
+      "badge": "Mais Vendido",
+      "description": "Cores vibrantes que não escondem o talento de ninguém. Ótimo custo-benefício pra desenhar sem economizar na criatividade.",
+      "featured": true
+    },
+    {
+      "id": "marcadores-neon",
+      "name": "Marcadores Fluorescentes Neon",
+      "category": "canetas",
+      "categoryLabel": "Canetas e Tintas",
+      "price": 32.9,
+      "icon": "edit",
+      "badge": "",
+      "description": "Traço grosso e cor que salta da página. Perfeito pra destacar o que realmente importa nos estudos.",
+      "featured": false
+    },
+    {
+      "id": "cola-glitter-kit",
+      "name": "Cola Colorida Glitter Kit",
+      "category": "arte",
+      "categoryLabel": "Arte e Pintura",
+      "price": 27.9,
+      "icon": "auto_awesome",
+      "badge": "Novo",
+      "description": "Um kit de cores brilhantes pra transformar qualquer trabalho manual em obra de arte. Aprovadíssimo pela criançada.",
+      "featured": false
+    },
+    {
+      "id": "bloco-notas-adesivo",
+      "name": "Bloco de Notas Adesivo Criativo",
+      "category": "adesivos",
+      "categoryLabel": "Adesivos",
+      "price": 19.9,
+      "icon": "sticky_note_2",
+      "badge": "",
+      "description": "Post-its com estampas fofas pra lembretes, recados e organização do dia a dia sem ficar sem graça.",
+      "featured": false
+    }
+  ],
+  "categories": [
+    {
+      "slug": "todos",
+      "label": "Todos os Itens",
+      "icon": "grid_view"
+    },
+    {
+      "slug": "cadernos",
+      "label": "Cadernos",
+      "icon": "book"
+    },
+    {
+      "slug": "canetas",
+      "label": "Canetas e Tintas",
+      "icon": "edit_note"
+    },
+    {
+      "slug": "washi",
+      "label": "Fitas Washi",
+      "icon": "auto_awesome"
+    },
+    {
+      "slug": "adesivos",
+      "label": "Adesivos",
+      "icon": "loyalty"
+    },
+    {
+      "slug": "escritorio",
+      "label": "Material Escolar",
+      "icon": "backpack"
+    },
+    {
+      "slug": "arte",
+      "label": "Arte e Pintura",
+      "icon": "palette"
+    }
+  ]
+}

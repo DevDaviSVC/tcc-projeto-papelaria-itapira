@@ -2,9 +2,12 @@
   "name": "api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "npx nodemon ./app.js"
+    "dev": "npx nodemon ./server.js",
+    "start": "node server.js",
+    "test": "node --test",
+    "db:check": "node scripts/checkDatabase.js"
   },
   "keywords": [],
   "author": "",
